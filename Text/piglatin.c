@@ -1,21 +1,5 @@
 #include "../scanner.h"
 
-int is_vowel(char c) 
-{
-    switch(c)
-    {
-        // check for capitalized forms as well.
-        case 'a':
-        case 'e':
-        case 'i':
-        case 'o':
-        case 'u':
-            return 1;
-        default:
-            return 0;
-    }
-}
-
 void pigLatin(char *str, int size)
 {
 	int count = 0;

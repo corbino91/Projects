@@ -28,3 +28,19 @@ int getLine (char *prmpt, char *buff, size_t sz)
     buff[strlen(buff)-1] = '\0';
     return OK;
 }
+
+int is_vowel(char c) 
+{
+    switch(c)
+    {
+        // check for capitalized forms as well.
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            return 1;
+        default:
+            return 0;
+    }
+}

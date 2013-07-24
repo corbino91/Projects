@@ -5,8 +5,6 @@ void reverse(char *str, int size)
 	size = size;
 	char ans[size];
 
-	printf("size: %i\n", size);
-
 	int count = 0;
 	int i;
 	for (i = size; i >= 0; i--)
@@ -23,13 +21,15 @@ void reverse(char *str, int size)
 
 }
 
+
 int main(void) 
 {
 	int rc;
     char str[10];
 
     rc = getLine ("Enter string> ", str, sizeof(str));
-    if (rc == NO_INPUT) {
+    if (rc == NO_INPUT) 
+    {
         // Extra NL since my system doesn't output that on EOF.
         printf ("\nNo input\n");
         return 1;

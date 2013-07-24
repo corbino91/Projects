@@ -9,5 +9,6 @@
 #define TOO_LONG 2
 
 int getLine (char *prmpt, char *buff, size_t sz);
+int is_vowel(char c);
 
 #endif
