@@ -3,10 +3,6 @@ Martyr2’s Mega Project List
 
 Trying to complete all projects from [Martyr2’s Mega Project List](http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/).
 
-#### Addendum -- July 14, 2013: This repo is in the top 5 on GitHub. (And again on [July 22, 2013](https://github.com/thekarangoel/Projects/blob/master/top5-2013-07-22%2013_10_30.png))
-
-![made it to top 5](https://github.com/thekarangoel/Projects/raw/master/top5.png)
-
 ===============================
 
 **Note**: If you fork this repo to solve these projects in any language of your choice, I suggest you remove all my code, and start from scratch; you'll benefit a lot. In any case, **do not send pull requests for replacing my code**. This is my space to store my code. That said, if you have suggestions for adding or removing problems, feel free to [open an issue](https://github.com/thekarangoel/Projects/issues/new).
