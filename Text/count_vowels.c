@@ -1,21 +1,40 @@
 #include "../scanner.h"
 
-int vowelCount(char *str, int size)
+void vowelCount(char *str, int *vc, int size)
 {
-    int count = 0;
-
     int i;
     for (i = 0; i < size; i++)
-        if (is_vowel(str[i]))
-            count++;
-
-    return count;
+        switch(str[i])
+        {
+            case 'a':
+            case 'A':
+                vc[0]++;
+                break;
+            case 'e':
+            case 'E':
+                vc[1]++;
+                break;
+            case 'i':
+            case 'I':
+                vc[2]++;
+                break;
+            case 'o':
+            case 'O':
+                vc[3]++;
+                break;
+            case 'u':
+            case 'U':
+                vc[4]++;
+                break;
+            default:
+                size = size;
+        }
 }
 
 int main(void) 
 {
 	int rc;
-    char str[10];
+    char str[20];
 
     rc = getLine ("Enter string> ", str, sizeof(str));
     if (rc == NO_INPUT) {
@@ -33,12 +52,14 @@ int main(void)
     printf ("OK [%s]\n", str);
 
 	int size = strlen(str);
+    int vc[5] = {0};
+    char vowels[5] = {'a', 'e', 'i', 'o', 'u'};
 
-	printf("Original string: %s\n", str);
+	vowelCount(str, vc, size);
 
-	int count = vowelCount(str, size);
-
-	printf("vowel count: %i\n", count);
+    int i;
+    for (i = 0; i < 5; i++)
+	   printf("%c: %i\n", vowels[i], vc[i]);
 
 	return 0;
 }
