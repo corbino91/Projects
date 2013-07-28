@@ -9,7 +9,7 @@ Trying to complete all projects from [Martyr2’s Mega Project List](http://www.
 
 Some details about this repo:
 
-* I will use C to solve these. 
+* I will use C to solve these. (c++ for any class or gui stuff)
 * The projects will not be made in the order posted.
 * I may not be able to complete all of them. 
 * My method of solving them may not be the best. If you do not like my algorithm(s), please add a comment for the file/commit or open an issue, and I'll try to improve.
