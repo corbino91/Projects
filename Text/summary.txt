@@ -1,0 +1,2 @@
+String contained 3 lines
+String contained 5 lines
