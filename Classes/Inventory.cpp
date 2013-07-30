@@ -41,7 +41,7 @@ public:
 	{
 		Product p1(n, p, q);
 		inventory.push_back(p1);
-		sum += p;
+		sum += p *q;
 	}
 
 	void removeProduct(string n, double p, int q)
@@ -65,12 +65,24 @@ public:
 	{
 		int pos = getPos(n);
 		inventory.at(pos).stock(num);
-		sum += inventory.at(pos).getPrice();
+		sum += (inventory.at(pos).getPrice()) * num;
 	}
 
 	void printProducts()
 	{
-		cout << inventory.at(0).getId() << endl;
+		cout << "\nName\tPrice\tOn hand\t Total" << endl;
+		cout << "-------------------------------" << endl;
+
+		for(int i = 0; i < inventory.size(); i++) 
+		{
+    		cout << inventory.at(i).getId() << "\t";
+    		cout << "$" << inventory.at(i).getPrice() << "\t";
+    		cout << inventory.at(i).getQuantity() << "\t";
+    		cout << "$" << inventory.at(i).getPrice() * inventory.at(i).getQuantity() << endl;
+		}
+		cout << "-------------------------------" << endl;
+		cout << "Inventory Value:\t$" << sum << endl;
+		cout << endl;
 	}
 	
 };
@@ -81,11 +93,11 @@ int main()
 
 	mart.addProduct("ham", 12.52, 4);
 	mart.addProduct("bread", 3.25, 4);
-	
-	mart.removeProduct("bread", 3.25, 4);
+	mart.addProduct("eggs", 1.25, 36);
+	//mart.removeProduct("bread", 3.25, 4);
 
 	mart.printProducts();
 
-	cout << mart.getSum() << endl;
+	//cout << mart.getSum() << endl;
 	//p1.toString();
 }
